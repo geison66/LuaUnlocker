@@ -18,7 +18,7 @@ const unsigned char *pPatchSignature = (unsigned char *)"\xBE\x01\x2A\x2A\x2A\x2
 const char *pPatchPattern = "xx???xxx?xx";
 int offset = 1;
 #elif __linux__
-const unsigned char * pPatchSignature = (unsigned char *)"\x83\xFE\x01\x0F\x84\x2A\x2A\x2A\x2A\x83";
+const unsigned char * pPatchSignature = (unsigned char *)"\x83\xFE\x01\x0F\x84\x6F";
 const char* pPatchPattern = "xxxxx????x";
 int offset = 2;
 #endif
