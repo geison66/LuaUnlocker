@@ -15,11 +15,11 @@ LuaUnlocker g_LuaUnlocker;
 
 #ifdef _WIN32
 const unsigned char *pPatchSignature = (unsigned char *)"\xBE\x01\x00\x00\x00\x2B\xD6\x74\x5B\x3B\xD6";
-const char *pPatchPattern = "xx???xxx?xx";
+const char *pPatchPattern = "xxxxxxxxxxx";
 int offset = 1;
 #elif __linux__
 const unsigned char * pPatchSignature = (unsigned char *)"\x83\xFE\x01\x0F\x84\x6F";
-const char* pPatchPattern = "xxxxx????x";
+const char* pPatchPattern = "xxxxxx";
 int offset = 2;
 #endif
 
