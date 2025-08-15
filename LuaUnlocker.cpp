@@ -2,6 +2,8 @@
 //Edited for unlocking Lua
 //With lots of help from Vauff & tilgep
 
+// Search TEXT: "Script_Msg"
+
 #include <stdio.h>
 #include "LuaUnlocker.h"
 #include <sh_memory.h>
@@ -18,7 +20,7 @@ const unsigned char *pPatchSignature = (unsigned char *)"\xBE\x01\x00\x00\x00\x2
 const char *pPatchPattern = "xxxxxxxxxxx";
 int offset = 1;
 #elif __linux__
-const unsigned char * pPatchSignature = (unsigned char *)"\x83\xFE\x01\x0F\x84\x6F";
+const unsigned char * pPatchSignature = (unsigned char *)"\x83\xFE\x01\x0F\x84\x67";
 const char* pPatchPattern = "xxxxxx";
 int offset = 2;
 #endif
