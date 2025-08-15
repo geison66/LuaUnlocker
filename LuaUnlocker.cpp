@@ -1,8 +1,9 @@
 //Stolen entirely from https://github.com/Source2ZE/MovementUnlocker
 //Edited for unlocking Lua
-//With lots of help from Vauff & tilgep
+//With lots of help from Vauff & tilgep & Cruze03
 
 // Search TEXT: "Script_Msg"
+// Signature: \x55\x48\x89\xE5\x41\x55\x41\x54\x49\x89\xFC\x53\x48\x83\xEC\x08\x83\xFE\x01
 
 #include <stdio.h>
 #include "LuaUnlocker.h"
