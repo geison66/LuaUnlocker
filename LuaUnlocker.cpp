@@ -134,7 +134,7 @@ const char * LuaUnlocker::GetLicense()
 
 const char * LuaUnlocker::GetVersion()
 {
-	return "1.0.1";
+	return "1.0.2";
 }
 
 const char * LuaUnlocker::GetDate()
