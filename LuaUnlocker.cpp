@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include "LuaUnlocker.h"
-#include <sh_memory.h>
+#include <khook/memory.hpp>
 #ifdef _WIN32
 #include <Windows.h>
 #elif __linux__
@@ -99,9 +99,9 @@ bool LuaUnlocker::Load(PluginId id, ISmmAPI *ismm, char *error, size_t maxlen, b
 	}
 
 	//Patch
-	SourceHook::SetMemAccess((void*)(pPatchAddress + offset), 1, SH_MEM_READ | SH_MEM_WRITE | SH_MEM_EXEC);
+	KHook::Memory::SetAccess((void*)(pPatchAddress + offset), 1, KHook::Memory::READ | KHook::Memory::WRITE | KHook::Memory::EXECUTE);
 	*(unsigned char*)(pPatchAddress + offset) = ((unsigned char*)"\x02")[0];
-	SourceHook::SetMemAccess((void*)(pPatchAddress + offset), 1, SH_MEM_READ | SH_MEM_EXEC);
+	KHook::Memory::SetAccess((void*)(pPatchAddress + offset), 1, KHook::Memory::READ | KHook::Memory::EXECUTE);
 
 	META_CONPRINTF( "[Lua Unlocker] Successfully patched Lua Unlocker!\n" );
 
@@ -134,7 +134,7 @@ const char * LuaUnlocker::GetLicense()
 
 const char * LuaUnlocker::GetVersion()
 {
-	return "1.0.1";
+	return "1.0.2";
 }
 
 const char * LuaUnlocker::GetDate()
